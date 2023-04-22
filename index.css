@@ -3,7 +3,10 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     border: 1px solid black;
 }
 
@@ -21,18 +24,27 @@
 }
 
 .card {
-    width: 208Px;
+    width: 215Px;
     border: 1px solid black;
     padding: 10px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    
     border-radius: 3%;
 }
 
 .card > img {
     width: 100%;
+    border-radius: 3%;
 }
 
 .restaurant-list {
     display: flex;  
     flex-wrap: wrap;
+}
+
+.search-container {
+    margin-left: 40px;
+    padding: 10px;
 }
