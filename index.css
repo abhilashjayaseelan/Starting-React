@@ -1,50 +1,154 @@
-
-
+a {
+  text-decoration: none;
+  color: black;
+}
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: 2px solid #ddd; /* Add a bottom border */
+  background-color: #fff; /* Add a background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
 }
 
 .nav-items > ul {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 .nav-items > ul > li {
-    padding: 10px;
+  padding: 10px;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
+  margin-right: 20px; /* Add some margin to separate the logo from the menu */
+}
+
+.nav-items > ul > li > a {
+  color: #555; /* Add some color to the menu links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out; /* Add a transition effect */
+}
+
+.nav-items > ul > li > a:hover {
+  text-decoration: underline;
+  color: #000; /* Change the color on hover */
 }
 
 .card {
-    width: 215Px;
-    border: 1px solid black;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    
-    border-radius: 3%;
+  width: 200px;
+  height: 350px;
+  border: 2px solid #eadcdc;
+  border-radius: 10px;
+  padding: 19px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
 }
 
-.card > img {
-    width: 100%;
-    border-radius: 3%;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  color: #777;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .restaurant-list {
-    display: flex;  
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .search-container {
-    margin-left: 40px;
-    padding: 10px;
+  margin-left: 40px;
+  padding: 10px;
+}
+
+.shimmer-card {
+  width: 215px;
+  height: 215px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  border-radius: 3%;
+  background: lightgrey;
+}
+
+.error-page {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fff; /* Add a background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu h3 {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.menu h3:first-child {
+  margin-top: 10px;
 }

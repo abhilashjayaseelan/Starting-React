@@ -1,25 +1,38 @@
+import { useState } from "react";
+import { LOGO_URL } from "../urls";
+import { Link } from "react-router-dom";
+
 const Title = () => {
   return (
     <a href="/">
-      <img
-        className="logo"
-        alt="logo"
-        src="https://imgs.search.brave.com/yyUMgcDb3kKLcaMkubxNMu3b4u4XH3-vIJsquIc_sCE/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzYxMTk1/Nzkvc2NyZWVuc2hv/dHMvMTQ0MTQ3MzUv/ZHJpYmJsZV9mb29k/X2NvdXJ0XzR4LnBu/Zw"
-      />
+      <img className="logo" alt="logo" src={LOGO_URL} />
     </a>
   );
 };
 
 const Header = () => {
+  const [loginButton, setLoginButton] = useState(false);
+
   return (
     <div className="header">
       <Title />
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
           <li>Cart</li>
+          <li>
+            <button onClick={() => setLoginButton(!loginButton)}>
+              {loginButton ? "logout" : "login"}
+            </button>
+          </li>
         </ul>
       </div>
     </div>
