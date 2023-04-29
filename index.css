@@ -2,6 +2,46 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.body {
+  justify-content: center;
+}
+
+.search-container {
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #333;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #a0a1a2;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #b5d1f0;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -13,6 +53,7 @@ a {
   border-bottom: 2px solid #ddd; /* Add a bottom border */
   background-color: #fff; /* Add a background color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  font-family: "Open Sans", sans-serif;
 }
 
 .nav-items > ul {
@@ -55,7 +96,7 @@ a {
   margin-left: 50px;
   background-color: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -124,6 +165,7 @@ a {
   margin-right: 50px;
   background-color: #fff; /* Add a background color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu h1 {

@@ -39,7 +39,7 @@ const Body = () => {
   return allRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
-    <>
+    <div className="body">
       <div className="search-container">
         <input
           type="text"
@@ -72,7 +72,7 @@ const Body = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
