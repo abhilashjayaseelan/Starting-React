@@ -1,39 +1,24 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect, useDebugValue } from "react"; //? importing hooks from react
 import Shimmer from "./shimmer";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
-// function for filtering the data
-function filterData(searchText, restaurantsData) {
-  const filterData = restaurantsData?.filter((restaurant) => {
-    return restaurant?.data?.name
-      ?.toLowerCase()
-      .includes(searchText?.toLowerCase());
-  });
-  return filterData;
-}
+import { filterData } from "../utils/Helper";
+import useAllRestaurants from "../hooks/useAllRestaurants";
+import Offline from "./OffLine";
+import isOnline from "../hooks/useOnline";
 
 // body
 const Body = () => {
-  const [allRestaurants, setAllRestaurants] = useState([]); //? creating a local state variable with the useState hook!!!
+  const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchInput, setSearchInput] = useState();
+  const online = isOnline();
 
-  useEffect(() => {
-    getRestaurants();
-  }, []);
+  useAllRestaurants(setAllRestaurants);
+  useAllRestaurants(setFilteredRestaurants);
 
-  async function getRestaurants() {
-    try {
-      const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.9312328&lng=76.26730409999999&page_type=DESKTOP_WEB_LISTING"
-      );
-      const json = await data.json();
-      setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-      setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    } catch (err) {
-      console.error(err);
-    }
+  if (!online) {
+    return <Offline />;
   }
 
   return allRestaurants?.length === 0 ? (
@@ -63,11 +48,11 @@ const Body = () => {
       <div className="restaurant-list">
         {filteredRestaurants?.map((restaurant) => {
           return (
-            <Link to={"/restaurant/" + restaurant?.data?.id}>
-              <RestaurantCard
-                {...restaurant?.data}
-                key={restaurant?.data?.id}
-              />
+            <Link
+              to={"/restaurant/" + restaurant?.data?.id}
+              key={restaurant?.data?.id}
+            >
+              <RestaurantCard {...restaurant?.data} />
             </Link>
           );
         })}

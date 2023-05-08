@@ -194,3 +194,64 @@ a {
 .menu h3:first-child {
   margin-top: 10px;
 }
+
+/*todo----------------------------- offline page */
+
+.offline-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.offline-page__header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.offline-page__body {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.offline-page__animation {
+  display: flex;
+}
+
+.offline-page__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  animation: offline-dot 1s ease-in-out infinite;
+}
+
+.offline-page__dot:nth-child(1) {
+  background-color: #ff4e42;
+  animation-delay: 0s;
+}
+
+.offline-page__dot:nth-child(2) {
+  background-color: #ffa600;
+  animation-delay: 0.2s;
+}
+
+.offline-page__dot:nth-child(3) {
+  background-color: #ffcd03;
+  animation-delay: 0.4s;
+}
+
+@keyframes offline-dot {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
