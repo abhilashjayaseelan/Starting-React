@@ -6,7 +6,7 @@ import Shimmer from "./shimmer";
 
 const Restaurant = () => {
   const { id } = useParams();
-  const restaurant = useRestaurant(id);
+  const restaurant = useRestaurant(id); 
 
   return !restaurant ? (
     <Shimmer />

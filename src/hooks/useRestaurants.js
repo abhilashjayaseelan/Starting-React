@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { FETCH_RES_URL } from "../constants";
 
 const useRestaurant = (id) => {

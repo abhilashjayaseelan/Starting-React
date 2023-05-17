@@ -1,0 +1,219 @@
+/* 
+.body {
+  justify-content: center;
+} */
+/* 
+.search-container {
+  margin-top: 20px;
+} */
+/* 
+.search-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #333;
+  width: 300px;
+  margin-right: 10px;
+} */
+/* 
+.search-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #a0a1a2;
+  cursor: pointer;
+} */
+/* 
+.search-btn:hover {
+  background-color: #b5d1f0;
+} */
+
+
+
+.instamart {
+  align-items: center; /* Center items vertically */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: 2px solid #ddd; /* Add a bottom border */
+  background-color: #fff; /* Add a background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+  font-family: "Open Sans", sans-serif;
+}
+
+.mart-section {
+  padding: 20px;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+.hide-button {
+  padding: 10px 20px;
+  font-size: 10px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card {
+  width: 200px;
+  height: 350px;
+  border: 2px solid #eadcdc;
+  border-radius: 10px;
+  padding: 19px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  color: #777;
+}
+
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  margin-left: 40px;
+  padding: 10px;
+}
+
+
+.error-page {
+  margin-top: 300px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fff; /* Add a background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
+}
+
+.menu h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu h3 {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.menu h3:first-child {
+  margin-top: 10px;
+}
+
+/*todo----------------------------- offline page */
+
+.offline-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.offline-page__header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.offline-page__body {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.offline-page__animation {
+  display: flex;
+}
+
+.offline-page__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  animation: offline-dot 1s ease-in-out infinite;
+}
+
+.offline-page__dot:nth-child(1) {
+  background-color: #ff4e42;
+  animation-delay: 0s;
+}
+
+.offline-page__dot:nth-child(2) {
+  background-color: #ffa600;
+  animation-delay: 0.2s;
+}
+
+.offline-page__dot:nth-child(3) {
+  background-color: #ffcd03;
+  animation-delay: 0.4s;
+}
+
+@keyframes offline-dot {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

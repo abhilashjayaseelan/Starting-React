@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
+import Instamart from "./components/Instamart";
 import Restaurant from "./components/RestaurantVenue";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; //? importing router functions form router dom;
@@ -41,6 +42,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:id",
         element: <Restaurant />,
+      },
+      {
+        path: "/instamart/",
+        element: <Instamart />,
       },
     ],
   },
