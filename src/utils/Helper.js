@@ -11,18 +11,18 @@ export function filterData(searchText, restaurantsData) {
 // for the istamart page
 export const Section = ({ title, description, isVisible, section, setIsVisible }) => {
   return (
-    <div className="mart-section">
-      <h3>{title}</h3>
+    <div className= 'border border-black p-2 m-2'>
+      <h3 className="font-bold text-lg">{title}</h3>
       {isVisible ? (
         <>
-          <button className="hide-button" onClick={() => setIsVisible('')}>
+          <button className="hover:underline" onClick={() => setIsVisible('')}>
             hide
           </button>
           <p>{description}</p>
         </>
       ) : (
         <button
-          className="hide-button"
+        className="hover:underline"
           onClick={() => {
             setIsVisible(section);
           }}

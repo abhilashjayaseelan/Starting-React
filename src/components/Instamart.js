@@ -4,7 +4,7 @@ import { Section } from "../utils/Helper";
 const Instamart = () => {
   const [visibleSection, setIsVisibleSection] = useState("");
   return (
-    <div className="instamart">
+    <div className="mt-28 ml-10 mr-10">
       <Section
         title={"About Instamart"}
         description={

@@ -49,9 +49,7 @@ const Body = () => {
             .fill("1")
             .map((e, index) => {
               return (
-                <div className="flex flex-wrap p-3 m-7 mt-28 border-3 border-gray-500 rounded-md">
-                  <div className="h-96 w-60 bg-gray-300"></div>
-                </div>
+                <div key={index} className="h-96 w-60 p-3 m-7 border-3 bg-gray-300 animate-pulse"></div>
               );
             })}
         {filteredRestaurants.map((restaurant) => (
