@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//? importing component functions;
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
@@ -9,7 +8,7 @@ import Contact from "./components/Contact";
 import Instamart from "./components/Instamart";
 import Restaurant from "./components/RestaurantVenue";
 import Error from "./components/Error";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; //? importing router functions form router dom;
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
